@@ -1,2 +1,2 @@
-# goblinVtapkah.github.io
+# Игорь Новиков
 Мой первый сайт
