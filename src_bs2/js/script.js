@@ -15,7 +15,7 @@ $(document).ready(function(){
  		$('.image-link').magnificPopup({type:'image'});
 	});
 
-	let options = {threshold: [1]};
+	let options = {threshold: [0.75]};
 	let observer = new IntersectionObserver(onEntry, options);
 	let elements = $('.statistics');
 	elements.each((i, el) => {
