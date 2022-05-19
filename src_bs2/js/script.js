@@ -67,13 +67,17 @@ var statisticsValChanges = [0, 0, 0, 0];
 
 $('.statistics .statistics_title .container .row:eq(1) h3').each(i => {
 	statisticsValOrigin[i] = parseInt($('.statistics h3:eq('+ (i) +')').html(), 10);
-})
+});
 
 for(let i = 0; i <= 3; i++){
 	statisticsValChanges[i] = statisticsValOrigin[i] / 100;
 }
 
 $('.statistics .statistics_title .container .row:eq(1) h3').each((i, el) => {
+	$(el).text(statisticsVal[i]);
+});
+
+$('.statistics .statistics_title .container .row-animation h3').each((i, el) => {
 	$(el).text(statisticsVal[i]);
 });
 
@@ -93,10 +97,16 @@ function onEntry(entry){
 				$('.statistics .statistics_title .container .row:eq(1) h3').each((i, el) => {
 					$(el).text(parseInt(statisticsVal[i]));
 				});
+				$('.statistics .statistics_title .container .row-animation h3').each((i, el) => {
+					$(el).text(parseInt(statisticsVal[i]));
+				});
 				
 
 				if(statisticsValOrigin[0] - statisticsVal[0] < statisticsValChanges[0]){
 					$('.statistics .statistics_title .container .row:eq(1) h3').each((i, el) => {
+						$(el).text(parseInt(statisticsValOrigin[i]));
+					});
+					$('.statistics .statistics_title .container .row-animation h3').each((i, el) => {
 						$(el).text(parseInt(statisticsValOrigin[i]));
 					});
 					
