@@ -590,6 +590,23 @@ main::after{
 	font-size: 12px;
 	color: #243042;
 }
+.reviews_main p:first-child{
+	margin-bottom: 37px;
+	padding: 0px; 
+	font-size: 12px;
+	color: #243042;
+}
+
+@media (max-width: 991px){
+.reviews_main p{
+	padding: 0px 15px; 
+}
+.reviews_main p:first-child{
+	padding: 0px; 
+}
+
+}
+
 
 .circles{
 	width: 100%;
